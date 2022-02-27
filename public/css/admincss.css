@@ -1,0 +1,5 @@
+.m-portlet .m-portlet__head .m-portlet__head-caption .m-portlet__head-title {
+    display: initial;
+    table-layout: fixed;
+    height: 100%;
+}
