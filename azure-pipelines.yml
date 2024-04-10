@@ -17,7 +17,7 @@ steps:
   displayName: 'Use PHP version $(phpVersion)'
 
 - script: composer install --no-interaction --prefer-dist
-  displayName: 'composer install'
+  displayName: 'composer install --ignore-platform-req=php'
 
 - task: NodeTool@0
   inputs:
