@@ -19,7 +19,7 @@ use Illuminate\Http\Request;
 use Auth;
 use Cookie;
 
-class ProductController extends Controller
+class ProductController_old extends Controller
 {
     public function getProducts($category_name)
     {
