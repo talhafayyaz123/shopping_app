@@ -5,7 +5,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  phpVersion: 7.2
+  phpVersion: 8.1
 
 steps:
 - script: |
@@ -16,8 +16,8 @@ steps:
     sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
   displayName: 'Use PHP version $(phpVersion)'
 
-- script: composer install --no-interaction --prefer-dist
-  displayName: 'composer install --ignore-platform-req=php'
+- script: composer install install --ignore-platform-req=php --no-interaction --prefer-dist 
+  displayName: 'composer'
 
 - task: NodeTool@0
   inputs:
