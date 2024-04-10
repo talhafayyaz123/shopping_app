@@ -9,9 +9,9 @@ variables:
 
 steps:
 - script: |
-    sudo a2dismod php*
-    sudo a2enmod php$(phpVersion)
-    sudo systemctl restart apache2
+    sudo a2dismod php8.0
+    sudo a2enmod php7.4
+    sudo service apache2 restart
     sudo update-alternatives --set php /usr/bin/php$(phpVersion)
     sudo update-alternatives --set phar /usr/bin/phar$(phpVersion)
     sudo update-alternatives --set phpdbg /usr/bin/phpdbg$(phpVersion)
